@@ -3,6 +3,8 @@
 
 ## This function creates a special "matrix" object that can cache its inverse
 ## x stores the matrix, i stores the inverse
+## get will get the value of the matrix 
+## set will set the value of the matrix
 ## setinverse stores the inverse of the matrix 
 ## getinverse returns the inverse of the matrix or Null if not previously set by setinverse.
 ## Note, everytime set is called the inverse (i) is set to null ensuring any change to the matrix ,
@@ -25,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+## This function computes the inverse using the solve function of the special "matrix" returned by makeCacheMatrix above. 
 ## If the inverse has already been calculated (and the matrix has not changed), 
 ## then cacheSolve will retrieve the inverse from the cache.
 
